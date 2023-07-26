@@ -1,12 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JS DOM Practice</title>
-</head>
-<body>
-  <script src="./index.js"></script>
-</body>
-</html>
+const func = () => {
+    const h1Tag = document.createElement('h1')
+    h1Tag.setAttribute('id', 'main-heading')
+    h1Tag.textContent = 'Hello World!'
+    document.body.appendChild(h1Tag)
+
+}
+
+func()
+
+
+
+const pTag = () => {
+
+    const pTag = document.createElement('p')
+    pTag.setAttribute('class', 'boring-text')
+    pTag.setAttribute('id', 'main-text')
+    pTag.textContent = "Look, I'm some text!"
+    document.body.appendChild(pTag)
+}
+
+pTag()
