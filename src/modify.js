@@ -37,29 +37,31 @@ const removeOldInfo = () => {
 };
 
 const makeAlphabet = () => {
+    let string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     let alp = document.getElementById('alphabet')
     let num = alp.getAttribute('data-num-letters')
-    
-    const collection = document.getElementsByTagName("li");
+    //const collection = document.getElementsByTagName("li");
     for(let i =0; i <num; i++){
         let  li = document.createElement('li')
+        li.textContent =  `${string[i]} is letter #${i + 1} in the alphabet`
         alp.appendChild(li)
        
     }
-    for(let i =0; i <collection.length; i++){
-        
-       collection[i].textContent =`A is letter #${i + 1} in the alphabet`
-       
-    }
     
-             //`${collection[i]} is letter #${i + 1} in the alphabet`
     
-    console.log(alp)
 };
 
 const makeBio = () => {
   let bio = document.querySelector(`#my-bio`)
-  //bio.innerHTML = 
+  bio.innerHTML =`
+    <h2 id="bio-heading">About Me</h2>
+    <p>My name is Zo and I like learn cool new things</p>
+    <h3 id="hobby-heading">My Hobbies</h3>
+    <ul>
+         <li>Running</li>
+          <li>Reading</li>
+          <li>Writing</li>
+    </ul>`
 };
 
 const main = () => {
